@@ -31,6 +31,7 @@ import {
   Quote,
   ChevronDown,
   Star,
+  Calendar,
 } from "lucide-react";
 import { Reveal, Stagger, itemVariants } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
