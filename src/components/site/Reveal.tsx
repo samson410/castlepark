@@ -1,9 +1,10 @@
 import { motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
+const SHOW_TRANSITION = { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const };
 const defaultVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, y: 0, transition: SHOW_TRANSITION },
 };
 
 export function Reveal({
@@ -25,8 +26,8 @@ export function Reveal({
       whileInView="show"
       viewport={{ once: true, margin: "-60px" }}
       variants={{
-        ...defaultVariants,
-        show: { ...defaultVariants.show, transition: { ...defaultVariants.show!.transition, delay } },
+        hidden: defaultVariants.hidden,
+        show: { opacity: 1, y: 0, transition: { ...SHOW_TRANSITION, delay } },
       }}
     >
       {children}
