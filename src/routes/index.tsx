@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       { title: "Castle Park Daycare | Licensed Childcare & Early Learning" },
       { name: "description", content: "A safe, nurturing licensed daycare with play-based learning for infants to school age. Small groups, qualified educators and easy online enrolment." },
       { property: "og:title", content: "Castle Park Daycare | Licensed Childcare & Early Learning" },
-      { property: "og:description", content: "Play-based learning, small groups and qualified educators. Enroll your child online in minutes." },
+      { property: "og:description", content: "A safe, nurturing licensed daycare with play-based learning for infants to school age. Small groups, qualified educators and easy online enrolment." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
