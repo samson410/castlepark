@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, Sparkles, Star, Heart, Sun, Cloud } from "lucide-react";
 import heroImage from "@/assets/hero-children.jpg";
 
@@ -55,20 +56,20 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center lg:justify-start"
           >
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-base font-semibold text-white shadow-pop transition-all hover:-translate-y-0.5 hover:shadow-[0_25px_60px_-15px_rgba(255,138,101,0.65)] active:translate-y-0"
             >
               <Calendar className="h-5 w-5" />
               Book a Tour
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="#programs"
+            </Link>
+            <Link
+              to="/programs"
               className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white/80 px-6 py-4 text-base font-semibold text-ink backdrop-blur-md ring-1 ring-white/70 transition-all hover:bg-white"
             >
               Explore Programs
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div
