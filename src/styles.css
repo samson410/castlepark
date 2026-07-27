@@ -172,17 +172,11 @@
   .bg-soft { background-color: oklch(0.972 0.014 235); }
   .text-ink { color: oklch(0.226 0.04 257); }
   .text-ink-soft { color: oklch(0.498 0.034 257); }
-  .gradient-sky {
-    background-image: linear-gradient(135deg, color-mix(in oklab, var(--sky) 35%, white), color-mix(in oklab, var(--sun) 25%, white) 60%, color-mix(in oklab, var(--coral) 18%, white));
-  }
-  .gradient-sun {
-    background-image: linear-gradient(135deg, var(--sun), var(--coral));
-  }
-  .gradient-primary {
-    background-image: linear-gradient(135deg, var(--sky), color-mix(in oklab, var(--sky) 60%, var(--mint)));
-  }
-  .shadow-soft { box-shadow: 0 10px 30px -10px color-mix(in oklab, var(--sky) 35%, transparent); }
-  .shadow-pop { box-shadow: 0 20px 50px -15px color-mix(in oklab, var(--coral) 35%, transparent); }
+  .gradient-sky { background-color: color-mix(in oklab, var(--sky) 18%, white); }
+  .gradient-sun { background-color: var(--sun); }
+  .gradient-primary { background-color: var(--sky); }
+  .shadow-soft { box-shadow: 0 2px 10px -4px oklch(0.226 0.04 257 / 0.12); }
+  .shadow-pop { box-shadow: 0 4px 16px -6px oklch(0.226 0.04 257 / 0.16); }
   .blob-mask {
     border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
   }

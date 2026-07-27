@@ -236,7 +236,7 @@ export function Curriculum() {
               whileHover={{ y: -4, scale: 1.02 }}
               className="group relative overflow-hidden rounded-3xl bg-card p-6 text-center shadow-soft ring-1 ring-border/60"
             >
-              <span className={`mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br ${c.color} text-white shadow-pop transition-transform group-hover:rotate-12`}>
+              <span className={`mx-auto grid h-14 w-14 place-items-center rounded-2xl ${c.color} text-white shadow-pop transition-transform group-hover:rotate-12`}>
                 <c.icon className="h-7 w-7" />
               </span>
               <p className="mt-4 font-display text-base font-bold text-ink sm:text-lg">{c.label}</p>
@@ -346,7 +346,7 @@ export function Gallery() {
               className={`group relative overflow-hidden rounded-3xl shadow-soft ${g.h}`}
             >
               <img src={g.src} alt={g.alt} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-              <span className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+              <span className="absolute inset-0 bg-ink/30 opacity-0 transition-opacity group-hover:opacity-100" />
             </motion.button>
           ))}
         </Stagger>
@@ -401,7 +401,7 @@ export function Timeline() {
         </Reveal>
 
         <Stagger className="relative mt-12">
-          <span className="absolute left-6 top-2 bottom-2 w-0.5 rounded-full bg-gradient-to-b from-primary via-secondary to-coral md:left-1/2" />
+          <span className="absolute left-6 top-2 bottom-2 w-0.5 rounded-full bg-border md:left-1/2" />
           {timeline.map((t, i) => (
             <motion.div
               key={t.time}
