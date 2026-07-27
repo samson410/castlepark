@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import {
@@ -188,9 +189,9 @@ export function Programs() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-ink">
-                Learn more →
-              </a>
+              <Link to="/enroll" className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-ink">
+                Enroll now →
+              </Link>
             </motion.article>
           ))}
         </Stagger>
@@ -774,8 +775,26 @@ export function Footer() {
             </p>
           </div>
 
-          <FooterCol title="Quick links" items={["Home", "About", "Programs", "Gallery", "Contact"]} />
-          <FooterCol title="Programs" items={["Infants", "Toddlers", "Preschool", "Kindergarten Ready", "After School"]} />
+          <FooterCol
+            title="Quick links"
+            items={[
+              { label: "Home", to: "/" },
+              { label: "About us", to: "/about" },
+              { label: "Programs", to: "/programs" },
+              { label: "Enroll", to: "/enroll" },
+              { label: "Contact", to: "/contact" },
+            ]}
+          />
+          <FooterCol
+            title="Families"
+            items={[
+              { label: "Start enrolment", to: "/enroll" },
+              { label: "Book a tour", to: "/contact" },
+              { label: "Our curriculum", to: "/programs" },
+              { label: "Our team", to: "/about" },
+              { label: "Staff login", to: "/admin" },
+            ]}
+          />
 
           <div>
             <p className="font-display text-base font-bold">Stay in the loop</p>
@@ -796,14 +815,22 @@ export function Footer() {
   );
 }
 
-function FooterCol({ title, items }: { title: string; items: string[] }) {
+function FooterCol({
+  title,
+  items,
+}: {
+  title: string;
+  items: { label: string; to: string }[];
+}) {
   return (
     <div>
       <p className="font-display text-base font-bold">{title}</p>
       <ul className="mt-3 space-y-2 text-sm text-white/70">
         {items.map((i) => (
-          <li key={i}>
-            <a href="#" className="transition-colors hover:text-white">{i}</a>
+          <li key={i.label}>
+            <Link to={i.to} className="transition-colors hover:text-white">
+              {i.label}
+            </Link>
           </li>
         ))}
       </ul>
